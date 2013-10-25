@@ -1,4 +1,4 @@
 #Team Members
 * Christian Ray
 * Justin
-* Kevin
+* Kevin Birch
