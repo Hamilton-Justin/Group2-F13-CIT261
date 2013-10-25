@@ -1,4 +1,4 @@
 #Team Members
 * Christian
 * Justin
-* Kevin
+* Kevin Birch
