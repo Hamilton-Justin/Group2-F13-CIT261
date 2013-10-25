@@ -1,4 +1,4 @@
 #Team Members
-* Christian
+* Christian Ray
 * Justin
 * Kevin
