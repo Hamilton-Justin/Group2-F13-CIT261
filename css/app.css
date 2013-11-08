@@ -1,3 +1,80 @@
 /*
-*
-*/
+ * All CSS
+ *
+ * Created: 11/1/2013
+ */
+ @import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);
+ @import url(http://fonts.googleapis.com/css?family=Arimo);
+
+ body {
+ 	width: 100%;
+ 	font-family: 'Arimo', sans-serif;
+ }
+
+header {
+	background-color: #5BA0D0;
+}
+
+#logo {
+	font-family: 'Cinzel Decorative', cursive;
+	float: left;
+	color: lightcyan;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#logo #tagline {
+	font-family: 'Arimo', sans-serif;
+	font-size: .3em;
+	margin: -5px 0 0 30%;
+	font-weight: normal;
+	color: aliceblue;
+}
+
+nav ul#navItems {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navItems li {
+	padding: 0.5em;
+	font-size: 1.8em;
+	text-align: center;
+	opacity: 0.5
+}
+
+#navItems li.active {
+	background: white;
+	opacity: 1;
+}
+
+#navItems li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+ /*
+  * class to clear floats
+  */
+.clear {
+	clear: both;
+}
+ /*
+  * Add some spaces
+  */
+  .space5 {
+  	margin-top: 5px;
+  }
+  .space10 {
+  	margin-top: 10px;
+  }
+  .space20 {
+  	margin-top: 20px;
+  }
+  .space30 {
+  	margin-top: 30px;
+  }

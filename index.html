@@ -4,15 +4,40 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<!-- font awesome css -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css">
+	
+	<script src="scripts/app.js"></script>
 
-	<title>PitchIn</title>
+	<title>Kudos - thank everyone</title>
 </head>
 <body>
+	<header>
+		<div id="logo" class="">
+			<div>Kudos</div>
+			<div id="tagline">thank everyone</div>
 
+		</div>
+		<nav>
+			<ul id="navItems"> 
+				<li class="fa fa-road nav active" id="map"><a href="#"></a></li>
+				<li class="fa fa-map-marker nav" id="event"><a href="#"></a></li>
+				<li class="fa fa-bar-chart-o nav" id="stats"><a href="#"></a></li>
+				<li class="fa fa-share-square nav" id="share"><a href="#"></a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="content">
+		<!-- Let's put our main content here. 
+			This will also be where we eventually have the partials being swapped in/out. 
+		-->
+		<button onClick="changeActiveClass('event');">change class</button>
+
+	</section>
 
 	<footer>
 
 	</footer>
-	<script src="scripts/app.js"></script>
 </body>
 </html>
