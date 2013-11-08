@@ -20,10 +20,10 @@
 		</div>
 		<nav>
 			<ul id="navItems"> 
-				<li class="fa fa-road nav active" id="map"><a href="#"></a></li>
-				<li class="fa fa-map-marker nav" id="event"><a href="#"></a></li>
-				<li class="fa fa-bar-chart-o nav" id="stats"><a href="#"></a></li>
-				<li class="fa fa-share-square nav" id="share"><a href="#"></a></li>
+				<li class="fa fa-road nav active" id="map" onClick="changeActiveClass('map');"><a href="#"></a></li>
+				<li class="fa fa-map-marker nav" id="event" onClick="changeActiveClass('event');"><a href="#"></a></li>
+				<li class="fa fa-bar-chart-o nav" id="stats" onClick="changeActiveClass('stats');"><a href="#"></a></li>
+				<li class="fa fa-share-square nav" id="share" onClick="changeActiveClass('share');"><a href="#"></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -32,7 +32,6 @@
 		<!-- Let's put our main content here. 
 			This will also be where we eventually have the partials being swapped in/out. 
 		-->
-		<button onClick="changeActiveClass('event');">change class</button>
 
 	</section>
 
