@@ -20,15 +20,15 @@
 		</div>
 		<nav>
 			<ul id="navItems"> 
-				<li class="fa fa-road nav active" id="map" onClick="changeActiveClass('map');"><a href="#"></a></li>
-				<li class="fa fa-map-marker nav" id="event" onClick="changeActiveClass('event');"><a href="#"></a></li>
-				<li class="fa fa-bar-chart-o nav" id="stats" onClick="changeActiveClass('stats');"><a href="#"></a></li>
-				<li class="fa fa-share-square nav" id="share" onClick="changeActiveClass('share');"><a href="#"></a></li>
+				<li class="fa fa-road nav active" id="map" onClick="changeActiveClass('map'); newPartial(this);"><a href="#"></a></li>
+				<li class="fa fa-map-marker nav" id="event" onClick="changeActiveClass('event'); newPartial(this);"><a href="#"></a></li>
+				<li class="fa fa-bar-chart-o nav" id="stats" onClick="changeActiveClass('stats'); newPartial(this);"><a href="#"></a></li>
+				<li class="fa fa-share-square nav" id="share" onClick="changeActiveClass('share'); newPartial(this);"><a href="#"></a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<section class="content">
+	<section class="content" id="partialWrapper">
 		<!-- Let's put our main content here. 
 			This will also be where we eventually have the partials being swapped in/out. 
 		-->

@@ -15,6 +15,10 @@ header {
 	background-color: #5BA0D0;
 }
 
+section#partialWrapper {
+	padding: 10px;
+}
+
 #logo {
 	font-family: 'Cinzel Decorative', cursive;
 	float: left;
