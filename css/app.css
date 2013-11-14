@@ -9,6 +9,7 @@
  body {
  	width: 100%;
  	font-family: 'Arimo', sans-serif;
+ 	background-color: #F6F6F7;
  }
 
 header {
@@ -33,7 +34,7 @@ section#partialWrapper {
 #logo {
 	font-family: 'Cinzel Decorative', cursive;
 	float: left;
-	color: lightcyan;
+	color: #82DBFC;
 	font-size: 2em;
 	font-weight: bold;
 	padding: 10px;
@@ -61,8 +62,9 @@ nav ul#navItems {
 }
 
 #navItems li.active {
-	background: white;
+	background: #F6F6F7;
 	opacity: 1;
+	color: #82DBFC;
 }
 
 #navItems li a {
@@ -74,21 +76,29 @@ nav ul#navItems {
 
 #mapContainer {
 	margin: 10px;
-	height: 150px;
+	min-height: 150px;
 	border: 1px solid lightgray;
+	background-color: #fff;
 
 }
-table {
+
+table#mapDetailTable {
 	border-spacing: 2px;
 	border-color: gray;
+	width: 85%;
 }
-td, th {
+
+#mapDetailTable td, th {
   /*border: 1px solid #999;*/
   padding: 0.5rem;
   text-align: left;
 }
 
-table tr td {
+#mapDetailTable th {
+  font-size: 1.4em;
+}
+
+table#mapDetailTable tr td {
 	padding: 8px;
 	line-height: 20px;
 	text-align: left;
@@ -96,12 +106,21 @@ table tr td {
 	border-top: 1px solid #dddddd;
 }
 
-td:first-child {
+#mapDetailTable td:first-child {
 	color: gray;
 }
 
-tr:nth-child(even) {
+#mapDetailTable tr:nth-child(even) {
 	/*background: #bebec5;*/
+}
+
+#mapDetailTable tbody tr:hover > td{
+	background-color: #fff;
+	/*background-color: #f5f5f5;*/
+}
+
+.centerElem {
+	margin: auto;
 }
 
  /*
