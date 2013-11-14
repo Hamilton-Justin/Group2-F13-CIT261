@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
 	<!-- font awesome css -->
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css">
 	
@@ -12,14 +13,14 @@
 	<title>Kudos - thank everyone</title>
 </head>
 <body>
-	<header>
+	<header class="bounceInDown animated">
 		<div id="logo" class="">
 			<div>Kudos</div>
 			<div id="tagline">thank everyone</div>
 
 		</div>
 		<nav>
-			<ul id="navItems"> 
+			<ul id="navItems" > 
 				<li class="fa fa-road nav active" id="map" onClick="changeActiveClass('map'); newPartial(this);"><a href="#"></a></li>
 				<li class="fa fa-map-marker nav" id="event" onClick="changeActiveClass('event'); newPartial(this);"><a href="#"></a></li>
 				<li class="fa fa-bar-chart-o nav" id="stats" onClick="changeActiveClass('stats'); newPartial(this);"><a href="#"></a></li>

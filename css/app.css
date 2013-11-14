@@ -19,6 +19,17 @@ section#partialWrapper {
 	padding: 10px;
 }
 
+.splashGradient {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSJyZ2IoMTMwLCAyMTksIDI1MikiLz48c3RvcCBvZmZzZXQ9IjAuOTYiIHN0b3AtY29sb3I9IiM1QkEwRDAiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzVCQTBEMCIgLz48cmVjdCB4PSItMjAuNzEwNyUiIHk9Ii0yMC43MTA3JSIgd2lkdGg9IjE0MS40MjE0JSIgaGVpZ2h0PSIxNDEuNDIxNCUiIGZpbGw9InVybCgjZykiIC8+PC9zdmc+);
+	background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 104, color-stop(0%, rgb(130, 219, 252)), color-stop(96%, #5BA0D0));
+	background-image: -webkit-radial-gradient(center center, closest-corner, rgb(130, 219, 252) 0%, #5BA0D0 96%);
+	background-image: -moz-radial-gradient(center center, closest-corner, rgb(130, 219, 252) 0%, #5BA0D0 96%);
+	background-image: -ms-radial-gradient(center center, closest-corner, rgb(130, 219, 252) 0%, #5BA0D0 96%);
+	background-image: -o-radial-gradient(center center, closest-corner, rgb(130, 219, 252) 0%, #5BA0D0 96%);
+	background-image: radial-gradient(closest-corner at center center, rgb(130, 219, 252) 0%, #5BA0D0 96%);
+
+}
+
 #logo {
 	font-family: 'Cinzel Decorative', cursive;
 	float: left;
@@ -61,6 +72,38 @@ nav ul#navItems {
 	cursor: pointer;
 }
 
+#mapContainer {
+	margin: 10px;
+	height: 150px;
+	border: 1px solid lightgray;
+
+}
+table {
+	border-spacing: 2px;
+	border-color: gray;
+}
+td, th {
+  /*border: 1px solid #999;*/
+  padding: 0.5rem;
+  text-align: left;
+}
+
+table tr td {
+	padding: 8px;
+	line-height: 20px;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid #dddddd;
+}
+
+td:first-child {
+	color: gray;
+}
+
+tr:nth-child(even) {
+	/*background: #bebec5;*/
+}
+
  /*
   * class to clear floats
   */
@@ -82,3 +125,4 @@ nav ul#navItems {
   .space30 {
   	margin-top: 30px;
   }
+

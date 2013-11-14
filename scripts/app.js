@@ -10,7 +10,8 @@ function init() {
 		event: 'partials/newEventPage.html',
 		stats: 'partials/stats.html',
 		share: 'partials/share.html',
-		login: 'partials/authenticationPage.html'
+		login: 'partials/authenticationPage.html',
+		splash: 'splash.html'
 	};
 }
 init();
