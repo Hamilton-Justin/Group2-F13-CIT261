@@ -66,14 +66,14 @@ function changeActiveClass(id) {
 	el.className = el.className + active;
 };
 
-function vis() {
-	return {
-		var elem = document.getElementById(id);
-		show: = function(id) {
-			elem.className.replace(hide, "");
-		},
-		hide: = function(id) {
+// function vis(id) {
+// 	return {
+// 		var elem = document.getElementById(id);
+// 		show: = function(id) {
+// 			elem.className.replace(hide, "");
+// 		},
+// 		hide: = function(id) {
 
-		}
-	}
-}
+// 		}
+// 	}
+// };
