@@ -2,6 +2,11 @@
  * All CSS
  *
  * Created: 11/1/2013
+ *
+ * Selectors:
+ *	'#' is for id's
+ *	'.' is for classes
+ *	     if it doesn't have either a . or #, then it is probably an HTML element (example: div or table)
  */
  @import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);
  @import url(http://fonts.googleapis.com/css?family=Arimo);
