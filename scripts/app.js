@@ -3,7 +3,7 @@
  */
 var base_url, defaultView, partialsMap;
 function init() {
-	base_url = 'http://localhost/kudos/Team2-F13-CIT261/'; //base_url
+	// base_url = 'http://localhost/kudos/Team2-F13-CIT261/'; //base_url
 	defaultView ="map"; //default view
 	partialsMap = { //map of view partials
 		map: 	'partials/map.html',
@@ -13,7 +13,7 @@ function init() {
 		login: 'partials/authenticationPage.html',
 		splash: 'splash.html'
 	};
-}
+};
 init();
 getURL();
 newPartial();
@@ -29,10 +29,10 @@ function newPartial(obj) {
 		id = obj ? obj.id : defaultView,
 		location = partialsMap[id];
 
-	http.open( "GET", base_url + location, true );
+	http.open( "GET", location, true );
 	http.onreadystatechange = receiveResponse;
 	http.send(); 
-}
+};
 
 /*
  * receives response from for partial request - newPartial()
