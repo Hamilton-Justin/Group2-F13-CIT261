@@ -5,7 +5,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 6,
+    zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById('mapContainer'),
@@ -20,8 +20,14 @@ function initialize() {
       var infowindow = new google.maps.InfoWindow({
         map: map,
         position: pos,
-        content: 'Location found using HTML5.'
+        // content: 'I know where you live! Muhaha.'
       });
+
+	  var marker = new google.maps.Marker({
+	      position: pos,
+	      map: map,
+	      title: 'Your approximate location.'
+	  });
 
       map.setCenter(pos);
     }, function() {
@@ -31,6 +37,8 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+
+  
 }
 
 function handleNoGeolocation(errorFlag) {
