@@ -39,11 +39,14 @@ function newPartial(obj) {
  */
 function receiveResponse(e) {
 	// console.log(this.readyState);
-    if (this.readyState == 4 || this.status == 200) {
+    if (this.readyState == 4 && this.status == 200) {
         // http.readyState == 4, so we've received the complete server response
         // http.status == 200, so the response is good
         
-		document.getElementById('partialWrapper').innerHTML = this.response; 
+		document.getElementById('partialWrapper').innerHTML = this.response;
+		
+		if (document.getElementById('mapContainer'))
+			google.maps.event.addDomListener(window, 'load', initialize);
     }
 };
 
