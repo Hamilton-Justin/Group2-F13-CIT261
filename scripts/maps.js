@@ -2,7 +2,7 @@
  * map creation
  */
 var map;
-
+var mapID = document.getElementById('mapContainer')
 function initialize() {
   var mapOptions = {
     zoom: 15,
@@ -58,4 +58,5 @@ function handleNoGeolocation(errorFlag) {
   map.setCenter(options.position);
 }
 
-// google.maps.event.addDomListener(window, 'load', initialize);
+mapID.addEventListener('load', initialize());
+setTimeout(function(){google.maps.event.addDomListener(window, 'load', initialize)},750);

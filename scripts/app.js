@@ -24,9 +24,9 @@ function getURL() {
 };
 
 
-function newPartial(obj) {
+function newPartial(id) {
 	var http = new XMLHttpRequest(),
-		id = obj ? obj.id : defaultView,
+		id = id ? id : defaultView,
 		location = partialsMap[id];
 
 	http.open( "GET", location, true );
@@ -44,9 +44,9 @@ function receiveResponse(e) {
         // http.status == 200, so the response is good
         
 		document.getElementById('partialWrapper').innerHTML = this.response;
-		
-		if (document.getElementById('mapContainer'))
-			google.maps.event.addDomListener(window, 'load', initialize);
+
+		// if (document.getElementById('mapContainer'))
+		// 	google.maps.event.addDomListener(window, 'load', initialize);
     }
 };
 
@@ -80,3 +80,18 @@ function changeActiveClass(id) {
 // 		}
 // 	}
 // };
+window.onload = function(){
+	var nav = document.querySelector('ul#navItems');
+
+	nav.addEventListener('click', function(event) {
+		var target = event.target,
+			id = event.target.id;
+
+		while (target.tagName !== 'LI') {
+			target = target.parentNode;
+			if (target === nav) return;
+		}
+		newPartial(id);
+		changeActiveClass(id);
+	});
+}
