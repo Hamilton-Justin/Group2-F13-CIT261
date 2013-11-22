@@ -3,7 +3,8 @@
  */
 var base_url, defaultView, partialsMap;
 function init() {
-	// base_url = 'http://localhost/kudos/Team2-F13-CIT261/'; //base_url
+	base_url = 'http://localhost/kudos/Team2-F13-CIT261/'; //base_url
+	// base_url = '/kudos/'; //base_url
 	defaultView ="map"; //default view
 	partialsMap = { //map of view partials
 		map: 	'partials/map.html',
