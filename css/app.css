@@ -154,4 +154,9 @@ table#mapDetailTable tr td {
   .space30 {
   	margin-top: 30px;
   }
+  #centerBlock {
+      float: left;
+    position: relative;
+    left: 30%;
+  }
 
