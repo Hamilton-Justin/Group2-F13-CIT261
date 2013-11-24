@@ -70,12 +70,14 @@ nav ul#navItems {
 #navItems li:hover {
 	opacity: 1;
 	cursor: pointer;
+	transition: opacity 1s ease;
 }
 
 #navItems li.active {
-	background: #F6F6F7;
+	background-color: #F6F6F7;
 	opacity: 1;
 	color: #82DBFC;
+	transition: background-color .5s ease;
 }
 
 #navItems li a {
