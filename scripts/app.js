@@ -36,14 +36,18 @@ function newPartial(id) {
 
 /*
  * receives response from for partial request - newPartial()
+ *  also creates new wrapper div element for an animated class.
  */
 function receiveResponse(e) {
 	// console.log(this.readyState);
     if (this.readyState == 4 && this.status == 200) {
         // http.readyState == 4, so we've received the complete server response
         // http.status == 200, so the response is good
-        
-		document.getElementById('partialWrapper').innerHTML = this.response;
+        var old = document.getElementById('partialWrapper').childNodes[0],
+        	div = document.createElement("div");
+        div.className = 'animated fadeInUp';
+        div.innerHTML = this.response;
+		document.getElementById('partialWrapper').replaceChild(div, old);
 
 		// if (document.getElementById('mapContainer'))
 		// 	google.maps.event.addDomListener(window, 'load', initialize);
