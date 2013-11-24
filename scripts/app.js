@@ -98,4 +98,6 @@ window.onload = function(){
 		newPartial(id);
 		changeActiveClass(id);
 	});
+
+	loadScript();
 }
