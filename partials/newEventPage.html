@@ -1,11 +1,18 @@
 
 
+    
+
 <div id="centerBlock">
-    <p>Date: <input type="date"></p>
-    <p>Time: <input type="time"></p>
-    <p> Location: <input type="text"></p>
-    <p>Description: <input type="text"></p>
-    <p><button type="button">Submit</button></p>
+    <p style="text-align: center;font-size:40px;font-weight:bold">Create a New Event:</p>
+    <p>&nbsp;</p>
+    <p><input type="date" id="date"></p>
+    <p><input type="time" id = time></p>
+    <!--<p><input type="text" placeholder="Location" id="location"></p>--><select id="location">
+  <option value="cuurent">Use Current Location</option>
+  <option value="choose">Choose Other Location...</option>
+</select>
+    <p><textarea rows="6" cols="50" placeholder="Description of Event" id="eventDesc"></textarea></p>
+    <p><button type="button" onclick="submitEvent()">Submit</button></p>
     
 
 </div>

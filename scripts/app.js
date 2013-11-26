@@ -33,6 +33,19 @@ function newPartial(id) {
 	http.onreadystatechange = receiveResponse;
 	http.send(); 
 };
+function submitEvent(){
+    var dateInput= document.getElementById('date').value;
+    var timeInput= document.getElementById('time').value;
+    var locationInput= document.getElementById('location').value;
+    var eventDescInput= document.getElementById('eventDesc').value;
+    
+    console.log(dateInput);
+    console.log(timeInput);
+    console.log(locationInput);
+    console.log(eventDescInput);
+  
+  
+};
 
 /*
  * receives response from for partial request - newPartial()
