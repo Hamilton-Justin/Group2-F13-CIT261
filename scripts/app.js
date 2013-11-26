@@ -50,7 +50,7 @@ function newPartial(id) {
 	http.open( "GET", location, true );
 	http.onreadystatechange = receiveResponse;
 	http.send(); 
-	if (id === 'map' && partialsMap.map.callback !== null)
+	// if (id === 'map' && partialsMap.map.callback !== null)
 		// partialsMap.map.callback();
 		
 };
