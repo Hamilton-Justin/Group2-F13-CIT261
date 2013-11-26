@@ -58,5 +58,14 @@ function handleNoGeolocation(errorFlag) {
   map.setCenter(options.position);
 }
 
-mapID.addEventListener('load', initialize());
-setTimeout(function(){google.maps.event.addDomListener(window, 'load', initialize)},750);
+// mapID.addEventListener('load', initialize());
+// setTimeout(function(){google.maps.event.addDomListener(window, 'load', initialize)},750);
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+      'callback=initialize';
+  document.body.appendChild(script);
+}
+
