@@ -54,6 +54,16 @@ function newPartial(id) {
 		// partialsMap.map.callback();
 		
 };
+
+function event(date,time,location,eventDesc)
+{
+this.date=date;
+this.time=time;
+this.location=location;
+this.eventDesc=eventDesc;
+}
+
+
 function submitEvent(){
     var dateInput= document.getElementById('date').value;
     var timeInput= document.getElementById('time').value;
@@ -106,7 +116,43 @@ function changeActiveClass(id) {
 	el.className = el.className.replace(active, "");
 	el.className = el.className + active;
 };
-
+//shows or hides the city, state, and address boxes depending on dropdown menu selection  
+function hideShowField() { 
+      var selected = document.getElementById("location").value;
+      if (selected == 1) { 
+ document.getElementById('address').style.display='none';
+ document.getElementById('city').style.display='none';
+ document.getElementById('state').style.display='none'; 
+          /* document.getElementById("address").style.visibility ="hidden";
+            document.getElementById("city").style.visibility ="hidden";
+             document.getElementById("state").style.visibility ="hidden";*/
+ }
+ 
+ else if (selected == 2) {
+ document.getElementById('address').style.display='block';
+ document.getElementById('city').style.display='block';
+ document.getElementById('state').style.display='block'; 
+           /* document.getElementById("address").style.visibility ="visible";
+            document.getElementById("city").style.visibility ="visible";
+             document.getElementById("state").style.visibility ="visible"; */
+ }
+  }
+ 
+function alertBox() {
+    var event = new event(document.getElementById('date').value,document.getElementById('time').value,document.getElementById('location').value,document.getElementById('eventDesc').value); 
+   /* var date = document.getElementById('date').value;
+   var time = document.getElementById('time').value;
+   var eventDesc = document.getElementById('eventDesc').value; */
+   
+  /* JSON.stringify(date);
+   JSON.stringify(time);
+   JSON.stringify(location);
+   JSON.stringify(eventDesc); */ 
+    
+    alert("The date of the event will be " + event.date + "\n\
+The event will be at " + event.time + "\n\
+Here is a description: " + event.eventDesc);
+}
 // function vis(id) {
 // 	return {
 // 		var elem = document.getElementById(id);

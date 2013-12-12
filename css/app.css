@@ -159,6 +159,12 @@ table#mapDetailTable tr td {
   #centerBlock {
       float: left;
     position: relative;
-    left: 30%;
+   
+  }
+  #buttonTest:hover {
+      
+      font-size: 15px;
+      font-weight:bold;
+      transition: .25s
   }
 

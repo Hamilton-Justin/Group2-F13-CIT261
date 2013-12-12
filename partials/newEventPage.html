@@ -3,16 +3,20 @@
     
 
 <div id="centerBlock">
-    <p style="text-align: center;font-size:40px;font-weight:bold">Create a New Event:</p>
+    
+    <p style="font-size:40px;font-weight:bold">Create a New Event:</p>
     <p>&nbsp;</p>
     <p><input type="date" id="date"></p>
     <p><input type="time" id = time></p>
-    <!--<p><input type="text" placeholder="Location" id="location"></p>--><select id="location">
-  <option value="cuurent">Use Current Location</option>
-  <option value="choose">Choose Other Location...</option>
+    <!--<p><input type="text" placeholder="Location" id="location"></p>--><select id="location" onchange="hideShowField()">
+  <option value="1">Use Current Location</option>
+  <option value="2">Choose Other Location...</option>
 </select>
+    <p><input type="text" id="address" placeholder="Address" style=display:none></p>
+    <p><input type="text" id="city" placeholder="City" style=display:none></p>
+    <p><input type="text" id="state" placeholder="State" style=display:none></p>
     <p><textarea rows="6" cols="50" placeholder="Description of Event" id="eventDesc"></textarea></p>
-    <p><button type="button" onclick="submitEvent()">Submit</button></p>
-    
+    <p><button id ="buttonTest" type="button" onclick="alertBox()">Submit</button></p>
+   
 
 </div>
