@@ -1,7 +1,7 @@
 /*
  * app initialization
  */
-var base_url, defaultView, partialsMap;
+var base_url, defaultView, partialsMap, newEvent = {};
 function init() {
 	// base_url = '/kudos/'; //base_url
 	defaultView ="map"; //default view
@@ -26,8 +26,8 @@ function init() {
 			url: 'partials/login.html',
 			callback: null
 		},
-		splash: {
-			url: 'splash.html',
+		worker: {
+			url: 'partials/workerExample.html',
 			callback: null
 		}
 	};
@@ -53,29 +53,6 @@ function newPartial(id) {
 	// if (id === 'map' && partialsMap.map.callback !== null)
 		// partialsMap.map.callback();
 		
-};
-
-function event(date,time,location,eventDesc)
-{
-this.date=date;
-this.time=time;
-this.location=location;
-this.eventDesc=eventDesc;
-}
-
-
-function submitEvent(){
-    var dateInput= document.getElementById('date').value;
-    var timeInput= document.getElementById('time').value;
-    var locationInput= document.getElementById('location').value;
-    var eventDescInput= document.getElementById('eventDesc').value;
-    
-    console.log(dateInput);
-    console.log(timeInput);
-    console.log(locationInput);
-    console.log(eventDescInput);
-  
-  
 };
 
 /*
@@ -138,6 +115,26 @@ function hideShowField() {
  }
   }
  
+function event(date,time,location,eventDesc)
+{
+this.date=date;
+this.time=time;
+this.location=location;
+this.eventDesc=eventDesc;
+}
+
+
+function submitEvent(){
+    newEvent.date = document.getElementById('date').value;
+    newEvent.time = document.getElementById('time').value;
+    newEvent.address = document.getElementById('address').value;
+    newEvent.city = document.getElementById('city').value;
+    newEvent.state = document.getElementById('state').value;
+    newEvent.description = document.getElementById('eventDesc').value;
+    
+    console.log(newEvent);
+};
+
 function alertBox() {
     var event = new event(document.getElementById('date').value,document.getElementById('time').value,document.getElementById('location').value,document.getElementById('eventDesc').value); 
    /* var date = document.getElementById('date').value;
@@ -181,3 +178,26 @@ window.onload = function(){
 	partialsMap.map.callback = initialize;
 	loadScript();
 }
+
+/*
+ * Worker example functions
+ */
+  function sayHI() {
+    worker.postMessage({cmd: 'start', msg: 'Hi'});
+  }
+
+  function stop() {
+    // worker.terminate() from this script would also stop the worker.
+    worker.postMessage({cmd: 'stop', msg: 'Bye'});
+  }
+
+  function introduce() {
+  	var name = document.getElementById('workerName').value;
+    worker.postMessage({cmd: 'introduce', msg: name});
+  }
+
+  var worker = new Worker('scripts/someWork.js');
+
+  worker.addEventListener('message', function(e) {
+    document.getElementById('result').textContent = e.data;
+  }, false);

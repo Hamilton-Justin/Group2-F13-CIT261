@@ -94,6 +94,33 @@ nav ul#navItems {
 	background-color: #fff;
 }
 
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	color: white;
+	font-size: 1.3em;
+}
+
+.btn.primary {
+	border-color: #2986b9;
+	background-color: #2986b9;
+}
+
+.btn.primary:hover {
+	border-color: #1b71a0;
+	background-color: #1b71a0;
+	transition: background-color .5s ease;
+}
+
 table#mapDetailTable {
 	border-spacing: 2px;
 	border-color: gray;
@@ -156,15 +183,26 @@ table#mapDetailTable tr td {
   .space30 {
   	margin-top: 30px;
   }
+
+  .width50 {
+  	width: 50%;
+  }
+
+  .width100 {
+  	width: 100%;
+  }
+
   #centerBlock {
       float: left;
     position: relative;
    
   }
-  #buttonTest:hover {
-      
-      font-size: 15px;
-      font-weight:bold;
-      transition: .25s
-  }
 
+input, textarea, select {
+	background-color: #f6f6f7;
+}
+
+input:focus, textarea:focus, select:focus {
+	background-color: #fff;
+	transition: background-color 1s ease;
+}
