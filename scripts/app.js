@@ -95,32 +95,31 @@ function changeActiveClass(id) {
 };
 //shows or hides the city, state, and address boxes depending on dropdown menu selection  
 function hideShowField() { 
-      var selected = document.getElementById("location").value;
-      if (selected == 1) { 
- document.getElementById('address').style.display='none';
- document.getElementById('city').style.display='none';
- document.getElementById('state').style.display='none'; 
+	var selected = document.getElementById("location").value;
+	if (selected == 1) { 
+	document.getElementById('address').style.display='none';
+	document.getElementById('city').style.display='none';
+	document.getElementById('state').style.display='none'; 
           /* document.getElementById("address").style.visibility ="hidden";
             document.getElementById("city").style.visibility ="hidden";
              document.getElementById("state").style.visibility ="hidden";*/
- }
+}
  
  else if (selected == 2) {
- document.getElementById('address').style.display='block';
- document.getElementById('city').style.display='block';
- document.getElementById('state').style.display='block'; 
+	 document.getElementById('address').style.display='block';
+	 document.getElementById('city').style.display='block';
+	 document.getElementById('state').style.display='block'; 
            /* document.getElementById("address").style.visibility ="visible";
             document.getElementById("city").style.visibility ="visible";
              document.getElementById("state").style.visibility ="visible"; */
- }
-  }
+ 	}
+}
  
-function event(date,time,location,eventDesc)
-{
-this.date=date;
-this.time=time;
-this.location=location;
-this.eventDesc=eventDesc;
+function event(date,time,location,eventDesc){
+	this.date=date;
+	this.time=time;
+	this.location=location;
+	this.eventDesc=eventDesc;
 }
 
 
